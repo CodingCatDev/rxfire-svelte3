@@ -27,7 +27,7 @@
  <div class="flex-column">
 	 <Instructions />
 	 <SignIn user={user} />
-	 <div class="max-800">
+	 <div>
 		<AddCat user={user} />
 		<ListCatFacts user={user} />
 	  </div>

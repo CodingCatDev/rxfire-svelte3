@@ -1,31 +1,23 @@
 <script>
   import { firestore } from '../Firebase';
+  import catFacts from '../random.js';
   export let user;
   const addCatFact = async () => {
     try {
-      /* The dreaded CORS, had to pass through a proxy */
-      const blob = await fetch(
-        `https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1`
-      );
-      const value = await blob.json();
+      /* Gave up on the API working!!! */
+      const value = catFacts[Math.floor(Math.random() * catFacts.length)];
       await firestore
         .collection('catfacts')
         .add({ ...value, uid: $user.uid, catFactDate: new Date() });
     } catch (error) {
       console.error(error);
-      await firestore.collection('catfacts').add({
-        text: `API Failed so, Random cat fact #${Math.round(
-          Math.random() * 1000000
-        )}`,
-        uid: $user.uid,
-        catFactDate: new Date()
-      });
     }
   };
 </script>
-
-{#if $user}
-<button className="myButton" on:click="{addCatFact}">
-  2. Add Cat Fact
-</button>
-{/if}
+<div class="flex-column">
+  {#if $user}
+  <button className="myButton" on:click="{addCatFact}">
+    2. Add Cat Fact
+  </button>
+  {/if}
+</div>

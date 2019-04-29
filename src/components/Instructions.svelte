@@ -1,7 +1,7 @@
 <div class="flex-row">
-  <div style="max-width: width 800px;">
+  <div>
     <img
-      src="https://res.cloudinary.com/ajonp/image/upload/w_800/v1556553295/ajonp-ajonp-com/18-rxfire-svelte-cats/RxFire_Svelt.png"
+      src="https://res.cloudinary.com/ajonp/image/upload/w_500/v1556553295/ajonp-ajonp-com/18-rxfire-svelte-cats/RxFire_Svelt.png"
       alt="rxfire for cats"
     />
   </div>

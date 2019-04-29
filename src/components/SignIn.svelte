@@ -12,16 +12,17 @@
     await firebase.auth().signOut();
   };
 </script>
-
-{#if $user}
-<div>
-  <span>Welcome {$user.email} </span>
-  <button className="myButton" on:click="{signOut}">
-    4. Sign Out
+<div class="flex-column">
+  {#if $user}
+  <h1>
+    Welcome {$user.email}
+    <button className="myButton" on:click="{signOut}">
+      4. Sign Out
+    </button>
+  </h1>
+  {:else}
+  <button className="myButton" on:click="{signIn}">
+    1. Sign In
   </button>
+  {/if}
 </div>
-{:else}
-<button className="myButton" on:click="{signIn}">
-  1. Sign In
-</button>
-{/if}
