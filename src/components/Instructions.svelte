@@ -18,21 +18,21 @@
         Sign In
         <ul>
           <li>Uses Google Auth for Firebase</li>
-          <li>Found in App.js</li>
+          <li>Found in App.svelte</li>
         </ul>
       </li>
       <li>
         Add Cat Fact
         <ul>
           <li>This will use an API and Insert the facts into Firestore</li>
-          <li>Found in components/AddCat.js</li>
+          <li>Found in components/AddCat.svelte</li>
         </ul>
       </li>
       <li>
         Firestore collection
         <ul>
           <li>Observing catfacts for changes, heart eyes are your facts</li>
-          <li>Found in components/ListCatFacts.js</li>
+          <li>Found in components/ListCatFacts.svelte</li>
         </ul>
       </li>
       <li>
