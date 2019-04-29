@@ -8,7 +8,7 @@
 	/* Make something more observable */
 	const user = loggedIn$;
 </script>
-<style>
+<!-- <style>
 :global(div.flex-row){
 	display: flex;
 	justify-content: center;
@@ -22,7 +22,7 @@
 .max-800{
 	max-width: 800px;
 }
-</style>
+</style> -->
  <div class="flex-row">
  <div class="flex-column">
 	 <Instructions />
