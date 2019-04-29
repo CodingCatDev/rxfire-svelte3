@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ajonp-hosting-lessons"
+  },
+  "targets": {
+    "ajonp-hosting-lessons": {
+      "hosting": {
+        "ajonp-rxfire-svelte": [
+          "ajonp-rxfire-svelte"
+        ]
+      }
+    }
+  }
+}
