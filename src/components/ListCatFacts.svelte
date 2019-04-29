@@ -1,16 +1,14 @@
 <script>
   import { collectionData, firestore } from '../Firebase';
-  import { BehaviorSubject } from 'rxjs';
-
+  import { startWith } from 'rxjs/operators';
   const catFactsRef = firestore.collection('catfacts');
-  const catFacts = new BehaviorSubject([]);
 
   export let user;
 
-  collectionData(
+  const catFacts = collectionData(
     catFactsRef.orderBy('catFactDate', 'desc'),
     'catFactId'
-  ).subscribe(facts => catFacts.next(facts));
+  ).pipe(startWith([]));
 </script>
 <style>
   .flex-row {
